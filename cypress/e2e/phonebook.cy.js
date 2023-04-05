@@ -1,5 +1,7 @@
-describe('template spec', () => {
-  it('passes', () => {
-    cy.visit('https://example.cypress.io');
+describe('Phonebook', function () {
+  it('front page can be opened', function () {
+    cy.visit('http://localhost:3001');
+    cy.contains('Phonebook');
+    cy.contains('Aleksi Rendel');
   });
 });
