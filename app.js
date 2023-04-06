@@ -31,6 +31,10 @@ app.get('/', (request, response) => {
   response.send('<h1>Phonebook backend application</h1>');
 });
 
+app.get('/health', (req, res) => {
+  res.send('ok');
+});
+
 app.get('/info', (request, response, next) => {
   Person.estimatedDocumentCount()
     .then((count) => {
